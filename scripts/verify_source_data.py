@@ -1,6 +1,5 @@
 """Check the manuscript's tabular figure data with the Python standard library."""
 from pathlib import Path
-import collections
 import csv
 import hashlib
 import math
