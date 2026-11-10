@@ -1,0 +1,23 @@
+# Generated figures and Python cache
+outputs/
+__pycache__/
+*.py[cod]
+.venv/
+.deps/
+# Training artifacts and large source data belong in the separate archive.
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.dat
+*.h5
+*.hdf5
+*.zip
+*.docx
+*.pdf
+*.png
+*.svg
+*.tiff
+*.log
+.env
