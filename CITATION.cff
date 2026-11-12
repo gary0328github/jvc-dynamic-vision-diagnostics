@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite these supporting materials and the associated manuscript when reusing the numerical data or plotting tools."
+type: software
+title: "Supporting numerical data and plotting tools for dynamic-vision machinery fault diagnosis"
+authors:
+  - family-names: Yang
+    given-names: Chengrui
+  - family-names: Yu
+    given-names: Peng
+  - family-names: Hao
+    given-names: Hongtao
+  - family-names: Li
+    given-names: Xiang
+version: 2026.11.12
+date-released: 2026-11-12
+repository-code: "https://github.com/gary0328github/jvc-dynamic-vision-diagnostics"
+license: MIT

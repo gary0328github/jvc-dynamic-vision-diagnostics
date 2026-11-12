@@ -5,7 +5,7 @@ All unlabelled F1/accuracy values are fractions in [0,1]. The plotting scripts c
 | CSV | Rows | Content |
 | --- | --- | --- |
 | main_endpoints.csv | 270 | Pump 180 and Rotor 90 task/method/seed recording and window scores |
-| main_method_comparison.csv | 10 | Published-precision main method means and recomputed means |
+| main_method_comparison.csv | 10 | Manuscript-precision main method means and recomputed means |
 | pump_endpoints.csv | 72 | Full and calibrated DARM, 36 endpoints per method, for Figure 5 |
 | pump_paired.csv | 36 | Matched Pump full/calibrated scores and differences |
 | rotor_endpoints.csv | 36 | Full and calibrated DARM, 18 endpoints per method, for Figure 6 |

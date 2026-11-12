@@ -1,28 +1,13 @@
-# 动态视觉机械故障诊断配套材料
+# 动态视觉机械故障诊断支持材料
 
-本仓库目前为私有仓库，用于投稿前保存项目说明、图表源 CSV、绘图脚本及其依赖说明。仓库页面可供已获授权的账号查看。
+本仓库公开数值源数据、绘图脚本、数值核验脚本及引用信息，对应正在准备投稿的领域泛化机械故障诊断论文。
 
-## 使用方法
+`source_data`包含270个主实验端点、192个组件／系数端点及对应汇总。不同面板复用已有物理记录，任务和随机种子描述重复评价。
 
-先执行数值核验，使用 Python 标准库即可。
+在仓库根目录运行`python scripts/verify_source_data.py`可核对文件哈希、主要均值及图稿数据。运行`python scripts/plot_figures.py`生成图4至图6，随后运行`python scripts/export_figure5_compact.py`得到现稿采用的图5紧凑图例版本。依赖见requirements.txt。
 
-```bash
-python scripts/verify_source_data.py
-```
+核心训练实现、预处理构建器、模型权重与原始记录保存在仓库之外。实现参考和预处理登记作为审稿材料随论文提供。公开内容用于检查论文数值和重绘定量图。
 
-需要重绘图 4、图 5、图 6 时，在 Python 3.10 或 3.11 环境中安装依赖并运行绘图入口。
+原始XJTU-DV数据入口为https://doi.org/10.5281/zenodo.17447083，使用时请引用数据创建者及原始论文。原始DARM代码入口为https://github.com/mozhenling/doge-darm。
 
-```bash
-python -m pip install -r requirements.txt
-python scripts/plot_figures.py
-```
-
-结果写入 outputs/。图 5 的 −1.39、−0.23，以及图 6 的 −22.22、−3.19 等差值均采用统一的中性色标注。图 4 根据冻结组件结果计算。重绘输出会受到本机字体的影响，投稿用原图以现稿为准。
-
-## 目录说明
-
-source_data/ 保存主比较、组件与系数结果及图 4—图 6 的源数据。scripts/ 保存绘图与数值核验入口。MANIFEST_SHA256.csv 记录当前文件指纹。英文 README 与 source_data/README.md 说明数据单位和样本口径。
-
-Pump 的留出指标参与了开发及共享系数选择。无标签事件投影用于每条记录的 ROI 定位。Rotor 固定系数后按任务进行源域重训练。270 个主实验端点和 192 个组件/系数端点存在重合，不能合并解释为独立物理采集数量。
-
-论文录用后，按与导师确认的范围发布与录用稿相匹配的版本。当前训练工程和权重的整体归档由作者另行保存，投稿材料中的获取方式见本地准备说明。
+作者依次为Chengrui Yang、Peng Yu、Hongtao Hao及Xiang Li。引用信息见CITATION.cff。当前MIT许可证适用于仓库中的绘图和核验软件，复用时需保留许可证要求的版权与许可声明。
